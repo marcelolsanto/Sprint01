@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18 - value de input e interpolação</title>
+</head>
+<body>
+    <h2>Mini cadastro</h2>
+
+    Seu nome: <input id="in_nome"> <br>
+    Seu bairro: <input id="in_bairro"> <br>
+
+    <!-- o "placeholder" é um texto indicativo DENTRO 
+    da caixa de digitação de valores -->
+    <input id="in_idade" placeholder="Sua idade"> <br>
+    
+    <button onclick="cadastrar()">
+        Fazer cadastro
+    </button>
+    
+    <button onclick="cadastrar_bonitinho()">
+        Fazer cadastro bonitinho
+    </button>
+
+    <button onclick="cadastrar_lindo()">
+        Fazer cadastro Lindo!
+    </button>
+
+    <div id="div_cadastro"></div>
+
+</body>
+</html>
+<script>
+    function cadastrar() {
+        alert(in_nome.value);
+        alert(in_bairro.value);
+        alert(in_idade.value);
+    }
+
+    function cadastrar_bonitinho() {
+        // Abaixo são CRASES no inicio e fim, não NÃO aspas simples
+        // ${} -> Sifrão e CHAVES ({}), chaves, não parênteses, nem colchetes
+
+        // Criar textos com CRASES nos permitem usar a técnica de INTERPOLAÇÃO
+        // Com ela, juntamos parte estáticas (texto digitado) com
+        // partes dinâmicas (algo digitado num input, por exemplo)
+
+        // A partes dinâmicas, chamadas de expressões, estão sempre entre ${}
+        alert(`Você se chama ${in_nome.value}`);
+
+        alert(`E ${in_bairro.value} é o seu bairro`);
+
+        alert(`Sua idade atual é de ${in_idade.value} anos`);
+
+        // é possível usar mais de 1 expressão numa interpolação
+    alert(`Cadastro: ${in_nome.value}, que mora em ${in_bairro.value} e tem ${in_idade.value} anos`);
+        
+    }
+
+    function cadastrar_lindo() {
+        // Usando CRASES podemos quebrar linha normalmente! :)
+        div_cadastro.innerHTML = `
+        Nome cadastrado: <b>${in_nome.value}</b> <br>
+        Bairro cadastrado: <i>${in_bairro.value}</i> <br>
+        Idade cadastrada: <span style="color:blue">${in_idade.value}</span> <br>
+        `; // notem que fechamos a crase aqui!!!
+    }
+
+</script>
+
+
+
+
+
+

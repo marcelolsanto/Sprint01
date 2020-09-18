@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08</title>
+</head>
+<body>
+    
+    <h3>Primeira função chamando de um botão</h3>
+    <!--
+        tag <button>  -> Exibe um botão padrão
+                         O seu corpo é o que aparece escrito no botão
+                         Atributo "onclick" indica o que o botão fará quando clicarmos nele
+        No exemplo abaixo, pedimos para que o botão execute a função "primeiro_programa" quando clicado
+    -->
+    <button onclick="primeiro_programa()">Clica nimin</button>
+
+</body>
+</html>
+
+<!-- 
+    Dentro da tag <script> temos código na linguagem JavaScript 
+    Ou seja:
+        - Não podemos colocar tags HTML dentro dela
+        - Só podemos escrever código em JavaScript dentro dela
+
+    RECOMENDAÇÃO: crie ela sempre APÓS o fechamento do </html>
+-->
+<script>
+
+    // isso é um comentário, ou seja, NÃO influencia no comportamento do programa
+
+    // aqui criamos uma FUNÇÃO (function) de nome "primeiro_programa"
+    // assim, podemos EXECUTAR ela quantas vezes quisermos
+    // uma função é um "mini programa" pronto para uso quando necessário
+    function primeiro_programa() {
+        alert('minha página com JS'); // isso mostra uma janelinha com uma mensagem
+        document.title = 'cola na grade!'; // isso muda o título da página
+    }
+
+</script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19 - Variável, Números, Cálculos e Conversão p/ Números</title>
+</head>
+<body>
+    <h2>Minha primeira calculadora! Owwnnn! </h2>
+
+    Primeiro número: <input id="in_numero1"> <br>
+    Segundo número: <input id="in_numero2"> <br>
+
+    <button onclick="subtrair()">Subtrair</button> <br>
+    <button onclick="multiplicar()">Multiplicar</button> <br>
+    <button onclick="dividir()">Dividir</button> <br>
+    <button onclick="evelar()">Potência</button> <br>
+    <button onclick="somar()">Somar</button> <br>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function subtrair() {
+        /*
+        Aqui criamos uma VARIÁVEL chamada 'subtracao'
+        Uma variável é uma "informação" que o programa pode usar
+        depois, quantas vezes quiser.
+
+        A variável 'subtracao' conterá o resultado de:
+        O que está digitado em 'in_numero1' 
+        menos o que está digitado em 'in_numero1'
+
+        Como é possível ver, criamos uma variável usando 'var'
+        */
+        var subtracao = in_numero1.value - in_numero2.value;
+        
+        // aqui usamos a variável como expressão na interpolação
+        div_resultado.innerHTML = `Subtração: ${subtracao}`;
+    }
+
+    // para multiplicar, use *
+    // para dividir, use /
+    // para potência, use **  (ex: 2 ** 3 dá 8 ou 5 ** 2 dá 25)
+
+    function multiplicar() {
+        var multiplicacao = in_numero1.value * in_numero2.value;
+        div_resultado.innerHTML = `Produto: ${multiplicacao}`;
+    }
+
+    function dividir() {
+        var divisao = in_numero1.value / in_numero2.value;
+        div_resultado.innerHTML = `Razão: ${divisao}`;
+    }
+
+    function evelar() {
+        var potencia = in_numero1.value ** in_numero2.value;
+        div_resultado.innerHTML = `Potência: ${potencia}`;
+    }
+
+    function somar() {
+        // Number(alguma coisa) -> converte "alguma coisa" em número, se possível
+        // Abaixo, convertemos o que está na input in_numero1 em número
+        // Também convertemos o que está na input in_numero2 em número
+        // Assim, conseguimos SOMAR os 2 números
+        var adicao = Number(in_numero1.value) + Number(in_numero2.value);
+        div_resultado.innerHTML = `Soma: ${adicao}`;
+    }
+
+</script>
+
