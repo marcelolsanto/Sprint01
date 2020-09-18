@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 06</title>
+</head>
+<body>
+<h1>ki base do Guerreiro Sayajin: 2000</h1>
+<button onclick="ssj1()">Tranformar em SSJ</button>
+<button onclick="ssj2()">Tranformar em SSJ2</button>
+<button onclick="ssj3()">Tranformar em SSJ3</button>
+<button onclick="ssj()">Voltar para a forma Base</button>
+<div id="ki"></div>
+</body>
+</html>
+
+<script>
+    function ssj1() {
+        ki.innerHTML = `<h1 style="color: blue;" >ki na forma SSJ: 100000</h1>`;
+    }
+    function ssj2() {
+        ki.innerHTML += `<h1 style="color: yellow;background-color: blue;" >ki na forma SSJ: 200000</h1>`;
+    }
+    function ssj3() {
+        ki.innerHTML += `<h1 style="color: orange; background-color: yellow;" >ki na forma SSJ: 400000</h1>`;
+    }
+    function ssj() {
+        ki.innerHTML = ``;
+    }
+</script>

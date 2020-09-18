@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triatletismo</title>
+</head>
+<body>
+    <!--
+3. Crie um programa em HTML/JS o qual:
+a) Tenha um título grande no inicio "O que faz um triatleta?"
+b) Tenha os botões "Nada", "Corre" e "Pedala"
+c) Ao clicar no 1º botão, aparece, abaixo dos botões, a foto de alguém nadando
+d) Ao clicar no 2º botão, aparece, abaixo dos botões, a foto de alguém correndo
+e) Ao clicar no 3º botão, aparece, abaixo dos botões, a foto de alguém pedalando
+    -->
+<h3>O que faz um triatleta?</h3>
+<button onclick="nada()">Nada</button>
+<button onclick="corre()">Corre</button>
+<button onclick="pedala()">Pedala</button>
+<img id="nadando" src="nadando.jpg" style="display: none; height: 300px;">
+<img id="correndo" src="correndo.jpg" style="display: none; height: 300px;">
+<img id="pedalando" src="pedalando.jpg" style="display: none; height: 300px;">
+</body>
+</html>
+<script>
+    function nada() {
+        nadando.style.display = `block`;
+        correndo.style.display = `none`;
+        pedalando.style.display = `none`;
+    }
+    function corre() {
+        nadando.style.display = `none`;
+        correndo.style.display = `block`;
+        pedalando.style.display = `none`;
+    }
+    function pedala() {
+        nadando.style.display = `none`;
+        correndo.style.display = `none`;
+        pedalando.style.display = `block`;
+    }
+</script>
