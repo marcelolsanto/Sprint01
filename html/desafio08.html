@@ -1,3 +1,60 @@
+<<<<<<< HEAD:html/desafio08.html
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09</title>
+</head>
+<body>
+<!--
+8. Crie um programa em HTML/JS que ajude a ensinar crianças sobre os semáforos.
+a) Tente "desenhar" um semáforo simples (preto com a luzes vermelha, amarela e verde, 
+uma abaixo da outra) usando div e img (imagens de circulos com as 3 cores)
+b) Ao clicar em cada uma das imagens que representa as cores do semáforo, deve aparecer,
+abaixo do semáforo, uma dessas frases:
+* Letra branca e fundo vermelho: Pare! Aguarde o verde!
+* Letra preta e fundo laranja: Só siga se estiver perto e rápido.
+* Letra branca e fundo verde: Siga :)
+-->
+<center>
+<h2 style="color: blue">Click para ascender os semáfaros</h2>
+    <div style="width: 20%; height:500px; background-color: black;
+        border-radius: 15px;"><br><br><br>
+    <div id="vermelho" onclick="pare()" style="width: 100px; height:100px; background-color: rgb(255, 200, 200);
+         border-radius: 50px;"></div><br><br>
+    <div id="amarelo" onclick="atencao()" style="width: 100px; height:100px; background-color: rgb(255, 255, 200);
+        border-radius: 50px; "></div><br><br>
+    <div id="verde" onclick="siga()" style="width: 100px; height:100px; background-color: rgb(200, 255, 200);
+        border-radius: 50px"></div><br><br>
+<div id="frase"></div>
+    </div>
+</center>
+</body>
+</html>
+<script>
+    function pare() {
+        frase.innerHTML = `<h2 style="background-color: red;  color: white">
+        Pare!<br>Aguarde o verde!</h2>`;
+        vermelho.style.backgroundColor = `red`;
+        verde.style.backgroundColor = `rgb(200, 255, 200)`;
+        amarelo.style.backgroundColor = `rgb(255, 255, 200)`;
+    }
+    function atencao() {
+        frase.innerHTML = `<h2 style="background-color: orange;  color: black">
+        Só siga se estiver<br> perto e rápido.</h2>`;
+        amarelo.style.backgroundColor = `yellow`;
+        vermelho.style.backgroundColor = `rgb(255, 200, 200)`;
+        verde.style.backgroundColor = `rgb(200, 255, 200)`;
+    }
+    function siga() {
+        frase.innerHTML = `<h2 style="background-color: green;  color: white">
+        Siga em frente!</h2>`;
+        verde.style.backgroundColor = `green`;
+        vermelho.style.backgroundColor = `rgb(255, 200, 200)`;
+        amarelo.style.backgroundColor = `rgb(255, 255, 200)`;
+    }
+=======
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -53,4 +110,5 @@ abaixo do semáforo, uma dessas frases:
         vermelho.style.backgroundColor = `rgb(255, 200, 200)`;
         amarelo.style.backgroundColor = `rgb(255, 255, 200)`;
     }
+>>>>>>> e90329b2ca653b4c987148566f44099c09ba6487:desafio08.html
 </script>
