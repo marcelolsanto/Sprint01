@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 07 - Aula 20.</title>
+</head>
+<body>
+    <!--
+7. Refaça a questão 4 de tal forma que a frase do item
+d) apareça na cor de letra branca com fundo vermelho.
+    -->
+
+    <h3>Quantas latinhas de refrigerante você toma por dia?</h3>
+    <input id="in_latinhas" type="number" placeholder="Digite aqui?">
+    <button onclick="calcular()">Quantos refris?</button>
+    <div id="div_exibir"></div>
+    <div style="color: white; background-color: red"></div>
+    </body>
+    </html>
+
+    <script>
+    function calcular(params) {
+        var n = Number(in_latinhas.value);
+        var latinhas = 365*n;
+            if (latinhas < 500) {
+                div_exibir.innerHTML = (`Você consome ${latinhas} latinhas de refrigerante por ano!`);
+            }
+            if (latinhas >= 500){
+                latinhas = (`Cuidado com a diabetes!`);
+                div_exibir.innerHTML = (`<h4 style="color: white; background-color: red">
+                ${latinhas}<br>Você consome ${n*365} latinhas de refrigerante por ano!</h4>`);
+            }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Considerando que a maçã custa R$ 0,75</h3>
+    Diga quantas maçãs vc comprou!
+    <br><input id="in_macas" placeholder="Quantas maçãs vc comprou?">
+    <button onclick="comprar()">Finalizar compra</button>
+    
+</body>
+</html>
+
+<script>
+function comprar() {
+    var maca = (Number(in_macas.value));
+    var preco_maca = 0.75;
+    if (maca >= 10) {
+        preco_maca = 0.68;
+    };
+    var total = maca * preco_maca;
+    alert(`${total.toFixed(2)}`);
+};
+</script>

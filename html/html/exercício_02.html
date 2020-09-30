@@ -45,8 +45,8 @@ Nulos: <input id="qtVotos_nulos" placeholder="Digite a quantidade de votos nulos
         var B = Number(qtVotos_B.value) * 100 / Total;
         var C = invalidos * 100 / Total;
         total_vt.innerHTML = `<h4>Total de todos os votos: ${Total} votos</h4>`;
-        vtA.innerHTML = `<h4>Total de votos para o candidato A:${A}% e (${Number(qtVotos_A.value)} votos)</h4>`;
-        vtB.innerHTML = `<h4>Total de votos para o candidato B:${B}% e (${Number(qtVotos_B.value)} votos)</h4>`;
-        vtinvalidos.innerHTML = `<h4>Total de votos inválidos:${C}% e (${invalidos} votos)</h4>`;
+        vtA.innerHTML = `<h4>Total de votos para o candidato A:${A.toFixed(2)}% e (${Number(qtVotos_A.value)} votos)</h4>`;
+        vtB.innerHTML = `<h4>Total de votos para o candidato B:${B.toFixed(2)}% e (${Number(qtVotos_B.value)} votos)</h4>`;
+        vtinvalidos.innerHTML = `<h4>Total de votos inválidos:${C.toFixed(2)}% e (${invalidos} votos)</h4>`;
     }
 </script>

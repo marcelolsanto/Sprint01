@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 04 - Tabuada</title>
+</head>
+<body>
+<center>
+    <div>
+        <h2>Tabuada do Marcelo!</h2>
+        <label for="lerTabuada">Escolha uma Tabuada:</label><br><br>
+        <input id="lerTabuada" placeholder="Digite o(s) número(s)!"><br><br>
+        <button onclick="Tabuada()">Ver Tabuada</button><br><br>
+        <div id="resultado"></div>
+    </div>
+</center>
+</body>
+</html>
+<script>
+function Tabuada() {
+var n = Number(lerTabuada.value);
+    for (var i = 0; i <=10; i++){
+        resultado.innerHTML += (`<br>${i} x ${n} = ${i*n}`);
+    }
+}
+</script>

@@ -10,10 +10,10 @@
 <body>
 <center>
     <div>
-        <h3 class="titulo">Tabuada do Marcelo!</h3>
+        <h3>Tabuada do Marcelo!</h3>
         <label for="lerTabuada">Escolha uma Tabuada:</label><br><br>
-        <input class="digito" id="lerTabuada" placeholder="Digite o(s) número(s)!"><br><br>
-        <button class="botão" onclick="Tabuada()">Ver Tabuada</button><br><br>
+        <input id="lerTabuada" placeholder="Digite o(s) número(s)!"><br><br>
+        <button onclick="Tabuada()">Ver Tabuada</button><br><br>
         <div id="m1"></div><div id="m2"></div><div id="m3"></div>
         <div id="m4"></div><div id="m5"></div><div id="m6"></div>
         <div id="m7"></div><div id="m8"></div><div id="m9"></div>
@@ -25,15 +25,14 @@
 function Tabuada() {
 var n = Number(lerTabuada.value);
 var a = [n*1,n*2,n*3,n*4,n*5,n*6,n*7,n*8,n*9];
-        m1.innerHTML = `${n} x 1 = ${a[0]}`;
-        m2.innerHTML = `${n} x 2 = ${a[1]}`;
-        m3.innerHTML = `${n} x 3 = ${a[2]}`;
-        m4.innerHTML = `${n} x 4 = ${a[3]}`;
-        m5.innerHTML = `${n} x 5 = ${a[4]}`;
-        m6.innerHTML = `${n} x 6 = ${a[5]}`;
-        m7.innerHTML = `${n} x 7 = ${a[6]}`;
-        m8.innerHTML = `${n} x 8 = ${a[7]}`;
-        m9.innerHTML = `${n} x 9 = ${a[8]}`;
+        m1.innerHTML = `${n} x 1 = ${a[0]}<br>
+                        ${n} x 2 = ${a[1]}<br>
+                        ${n} x 3 = ${a[2]}<br>
+                        ${n} x 4 = ${a[3]}<br>
+                        ${n} x 5 = ${a[4]}<br>
+                        ${n} x 6 = ${a[5]}<br>
+                        ${n} x 7 = ${a[6]}<br>
+                        ${n} x 8 = ${a[7]}<br>
+                        ${n} x 9 = ${a[8]}<br>`;
 };
 </script>
-</iframe>
