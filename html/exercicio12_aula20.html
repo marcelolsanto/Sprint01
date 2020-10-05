@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 12 - Aula 20.</title>
+</head>
+<body>
+<!--
+12. Crie um programa em HTML/JS que controle o peso médio dentro de um elevador:
+
+a) Solicite a quantidade de homens que entraram no elevador
+b) Solicite a quantidade de mulher que entraram no elevador
+c) Ao clicar em "Analisar peso", calcule o peso estimado sendo: 
+homens x 80 somado com mulheres x 60
+d) Exiba na página a mensagem "Este elevador suporta 800 Kg 
+e o peso estimado desta lotação é de xxxkg";
+e) Se o peso estimado for maior que 800, exibir também a mensagem 
+"Será necessário descer alguém para que o elevador se movimente", na cor azul.
+-->
+
+<h3>Quantos homens entraram no elevador?</h3>
+<input id="in_homens" type="number" placeholder="Digite aqui!">
+<h3>Quantos mulheres entraram no elevador?</h3>
+<input id="in_mulheres" type="number" placeholder="Digite aqui!">
+<button onclick="calcule()">Analisar peso</button><br><br>
+<div id="div_exibir"></div>
+</body>
+</html>
+
+<script>
+function calcule() {
+    var h = Number(in_homens.value)*80;
+    var m = Number(in_mulheres.value)*60;
+    var total = h+m;
+
+    if (total <= 800){
+        div_exibir.innerHTML = `Este elevador suporta 800 Kg 
+            e o peso estimado desta lotação é de ${total}kg`;
+    }
+    if (total > 800){
+        div_exibir.innerHTML = `Este elevador suporta 800 Kg 
+        e o peso estimado desta lotação é de ${total}kg<br>
+        Será necessário descer alguém para que o elevador se movimente!`;
+    }
+}
+</script>

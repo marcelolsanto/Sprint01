@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista if - q01</title>
+</head>
+<body>
+    
+    Quantas maçãs comprou?
+    <input id="in_macas"> <br>
+
+    <button onclick="comprar()">Finalizar compra</button>
+
+</body>
+</html>
+<script>
+    function comprar() {
+        var macas = Number(in_macas.value);
+
+        var preco_maca = 0.75; // números decimais separamos por PONTO e não vírgula!
+
+        if (macas >= 10) {
+            preco_maca = 0.68;
+        }
+
+        var total = macas * preco_maca;
+
+        // .toFixed(x) numa variável numérica arredonda ela para x casas decimais
+        alert(`Total a pagar: R$${total.toFixed(2)}`);
+
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista if - q02</title>
+</head>
+<body>
+    
+    Quantas infrações cometeu?
+    <input id="in_infracoes"> <br>
+
+    Qual o valor do carro?
+    <input id="in_carro"> <br>
+
+    <button onclick="calcular_seguro()">
+        Calcular seguro
+    </button>
+    <br>
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function calcular_seguro() {
+        var infracoes = Number(in_infracoes.value);
+        var carro = Number(in_carro.value);
+
+        var seguro = carro * 0.015; // calculando 1,5% do carro
+
+        if (infracoes < 3) {
+            seguro = seguro * 0.9; // tirando 10% de seguro
+        }
+
+        // .toFixed(x) numa variável numérica arredonda ela para x casas decimais
+        div_resultado.innerHTML = `Seu seguro ficará em R$${seguro.toFixed(2)}`;
+    }
+</script>
+
+
+

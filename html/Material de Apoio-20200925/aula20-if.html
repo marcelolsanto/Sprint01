@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 20</title>
+</head>
+<body>
+
+    <h2>Cálculo de multa e situação da CHN</h2>
+
+    Quantos pontos tem sua CNH?
+    <input id="in_pontos"> <br>
+
+    <button onclick="verificar()">Verificar situação</button>
+    
+</body>
+</html>
+<script>
+
+function verificar() {
+    // Number("8") -> 8
+    // Number("99") -> 99
+    var pontos = Number(in_pontos.value);
+
+    // if -> "se"
+    // após o if temos um ()
+    // nesse () temos um TESTE LÓGICO (ou EXPRESSÃO LÓGICA ou BOLEANA)
+    // Um Teste Lógico só pode ter como resultados: true (verdadeiro) ou false (falso)
+    // Se o resultado for true, o código nas {} do if será executado
+    // Caso contrário será ignorado
+    
+    // CONCEITO: O "if" é uma ESTRUTURA DE DECISÃO
+    if (pontos >= 20) {
+        alert('Sua CNH está suspensa! :(');
+    }
+
+    var multa = pontos * 100;
+
+    alert(`Valor de sua multa: ${multa}`);
+
+    // alert(`Valor de sua multa: ${pontos * 100}`); // funciona
+    // alert(multa);  // isso funciona :)
+}
+
+</script>
+
+
+
+
+
+

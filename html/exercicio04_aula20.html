@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 04 - Aula 20</title>
+</head>
+<body>
+<!--
+4. Amin Tiroso bebe com certa frequência e quer saber quanto consome de refrigerante em 1 ano. 
+Para ajudá-lo a saber essa informação, crie um programa em HTML/JS o qual:
+
+a) Pergunte quantas latinhas de refrigerante toma por dia
+
+b) Ao clicar num botão "Quantos refris?", calcule a quantidade de refrigerante que ele consome 
+em 1 ano, considerando que 1 ano possui 365 dias
+
+c) Exiba na página a quantidade de latinhas que ele consome por ano
+
+d) Somente caso a quantidade for a partir de 500, exiba também a frase: "Cuidado com a diabetes!"
+-->
+
+
+<h3>Quantas latinhas de refrigerante você toma por dia?</h3>
+<input id="in_latinhas" type="number" placeholder="Digite aqui?">
+<button onclick="calcular()">Quantos refris?</button>
+<div id="div_exibir"></div>
+</body>
+</html>
+
+<script>
+function calcular(params) {
+    var n = Number(in_latinhas.value);
+    var latinhas = 365*n;
+        if (latinhas < 500) {
+            div_exibir.innerHTML = (`Você consome ${latinhas} latinhas de refrigerante por ano!`);
+        }
+        if (latinhas >= 500){
+            latinhas = (`Cuidado com a diabetes!`);
+            div_exibir.innerHTML = (`${latinhas}<br>Você consome ${n*365} latinhas de refrigerante por ano!`);
+        }
+}
+</script>

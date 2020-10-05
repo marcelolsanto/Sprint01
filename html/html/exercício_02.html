@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <!--
+2. Crie um programa em HTML/JS o qual:
+a) Solicite a quantidade de votos que o "Zé Buduia" (ou o nome que quiser) teve na eleição
+b) Solicite a quantidade de votos que a "Maria Bigodenha" (ou o nome que quiser) teve na eleição
+c) Solicite a quantidade de votos brancos que houveram na eleição
+d) Solicite a quantidade de votos nulos que houveram na eleição
+e) Ao clicar em "Resultado da Eleição", exibir textos  conforme o exemplo abaixo:
+
+    Total de votos: 200
+    Zé Ruela: 40% (80 votos)
+    Maria Bigodenha: 35% (70 votos)
+    Inválidos: 25% (50 votos)
+
+A quantidade de votos "Inválidos" é a soma de brancos e nulos - valores colhidos nos itens c) e d) -
+Não se preocupe em mostrar primeiro o "vencedor". Não temos como saber isso com o que aprendemos na 
+programação até aqui ;) Mostre os candidatos na ordem que quiser.
+    -->
+    <center>
+        <h3>Eleições!</h3>
+Candidato A: <input id="qtVotos_A" placeholder="Digite a quantidade de votos para o candidato A"><br><br>
+Candidato B: <input id="qtVotos_B" placeholder="Digite a quantidade de votos para o candidato B"><br><br>
+Brancos: <input id="qtVotos_brancos" placeholder="Digite a quantidade de votos brancos"><br><br>
+Nulos: <input id="qtVotos_nulos" placeholder="Digite a quantidade de votos nulos"><br><br>
+<BUtton onclick="resultado()">Resultado da Eleição!</BUtton><br><br>
+<div id="total_vt"></div>
+<div id="vtA"></div>
+<div id="vtB"></div>
+<div id="vtinvalidos"></div>
+    </center>
+</body>
+</html>
+<script>
+    function resultado() {
+        var Total = Number(qtVotos_A.value) + Number(qtVotos_B.value) + Number(qtVotos_brancos.value) + Number(qtVotos_nulos.value);
+        var invalidos = Number(qtVotos_brancos.value) + Number(qtVotos_nulos.value);
+        var A = Number(qtVotos_A.value) * 100 / Total;
+        var B = Number(qtVotos_B.value) * 100 / Total;
+        var C = invalidos * 100 / Total;
+        total_vt.innerHTML = `<h4>Total de todos os votos: ${Total} votos</h4>`;
+        vtA.innerHTML = `<h4>Total de votos para o candidato A:${A.toFixed(2)}% e (${Number(qtVotos_A.value)} votos)</h4>`;
+        vtB.innerHTML = `<h4>Total de votos para o candidato B:${B.toFixed(2)}% e (${Number(qtVotos_B.value)} votos)</h4>`;
+        vtinvalidos.innerHTML = `<h4>Total de votos inválidos:${C.toFixed(2)}% e (${invalidos} votos)</h4>`;
+    }
+</script>

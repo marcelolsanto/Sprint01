@@ -24,7 +24,7 @@
 <script>
     function total() {
         var total = Number(in_nota1.value) + Number(in_nota2.value)+Number(in_nota3.value) + Number(in_nota4.value);
-        div_boletim.innerHTML = `Sua nota total é: ${total} pts.`;
+        div_boletim.innerHTML = `Sua nota total é: ${total.toFixed(2)} pts.`;
         alert(`Você somou todas as suas notas!`);
         div_boletim.style.color='red';    
         div_boletim.style.backgroundColor='yellow';
@@ -33,7 +33,7 @@
     function media() {
         var soma = Number(in_nota1.value)+Number(in_nota2.value)+Number(in_nota3.value)+Number(in_nota4.value);
         var media = soma / 4;
-        div_boletim.innerHTML = `Sua nota média é: ${media} pts.`;
+        div_boletim.innerHTML = `Sua nota média é: ${media.toFixed(2)} pts.`;
         alert(`Você somou todas as suas notas e dividiu por 4!`);
         div_boletim.style.color='blue';    
         div_boletim.style.backgroundColor='orange';
