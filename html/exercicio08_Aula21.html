@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 08 - Aula 21</title>
+</head>
+<body>
+    <input id="in_tempo" placeholder="Digite o tempo em Anos que trabalhou para o pai da pretendente:"><br>
+    <input id="in_qt_trigo" placeholder="Digite quantidade em kilos da plantação de trigo:"><br>
+    <input id="in_qt_faltas" placeholder="Digite quantidade em dias que faltou ao trabalho:"><br>
+    <button onclick="deuMatch()">Deu match</button><br>
+    <span id="span_frase"></span>
+
+</body>
+</html>
+<script>
+    function deuMatch() {
+        var tempo = Number(in_tempo.value);
+        var qt_trigo = Number(in_qt_trigo.value);
+        var qt_faltas = Number(in_qt_faltas.value);
+
+        if (tempo >= 5 && qt_trigo >= 300 && qt_faltas <= 5) {
+            span_frase.innerHTML = "Minha filha será sua!"
+        } else {
+            span_frase.innerHTML = "Deu ruin! Trabalhe mais 2 anos!"
+        }
+    }
+</script>

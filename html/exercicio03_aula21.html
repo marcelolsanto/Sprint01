@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 03 - Aula 21</title>
+</head>
+<body>
+    Digite aqui a idade: <input type="number" id="in_idade"><br>
+    Digite aqui o peso: <input type="number" id="in_peso"><br>
+    <button onclick="verifica_idade_peso()">Pode brincar</button>
+    <span id="span_frase"></span>
+
+</body>
+</html>
+<script>
+    function verifica_idade_peso() {
+        var idade = in_idade.value;
+        var peso = in_peso.value;
+        if (idade > 15 && peso <= 100) {
+            span_frase.innerHTML = "Você poderá brincar :)"
+        } else {
+            span_frase.innerHTML = "Você não poderá brincar :)"
+        }
+    }
+</script>

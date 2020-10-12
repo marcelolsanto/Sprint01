@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 07 - Aula 21</title>
+</head>
+<body>
+    <select id="select_cafe">
+        <option value="ovos">Ovos</option>
+        <option value="leite_arroz">Leite de arroz</option>
+        <option value="bacon">Bacon</option>
+    </select>
+    <br>
+    <select id="select_almoco">
+            <option value="bife">Bife</option>
+            <option value="hamburger_soja">Hamburger de Soja</option>
+            <option value="frango_grelhado">Frango Grelhado</option>
+        </select>
+        <br>
+        <select id="select_jantar">
+                <option value="picanha">Picanha de Soja</option>
+                <option value="cupim">Cupim</option>
+                <option value="coracao">Coração</option>
+            </select>
+            <br>
+            <button onclick="verificar_cardapio()">Sou vegano</button>
+
+</body>
+</html>
+<script>
+
+function verificar_cardapio() {
+    var cafe = select_cafe.value;
+    var almoco = select_almoco.value;
+    var jantar = select_jantar.value;
+    
+    if (cafe == "leite_arroz" && almoco == "hamburger_soja" && jantar == "picanha") {
+        alert("Sim, você é vegano!");
+    } else {
+        alert("Não, você não é vegano!");
+    }
+}
+</script>
