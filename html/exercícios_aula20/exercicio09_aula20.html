@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 02 - Aula 20.</title>
+</head>
+<body>
+    <!--
+9. Na cidade Paulopolis a luz custa R$ 0,85 por kWh. Criar um programa em HTML/JS que:
+a) Solicite a quantidade de kWh consumida no mês
+b) Ao clicar em "calcular conta de luz", calcule o valor da conta no mês
+c) Dê um desconto de 10% somente se a quantidade for menor que 100 kWh
+d) Exiba um alerta com o valor da conta a ser paga
+
+OBS. Faça o diagrama de atividades para este exercício.
+    -->
+
+<h3>Digite o seu consumo de energia elétrica!</h3>
+<input id="in_consumo" type="number" placeholder="Digite seu consumo!">
+<button onclick="calcular()">Calcular conta de luz!</button>
+<div id="div_exibir"></div>
+
+</body>
+</html>
+<script>
+function calcular() {
+    var kWh = Number(in_consumo.value);
+    var concusmo = kWh*0.85;
+    var desconto = concusmo*0.9;
+
+    if (concusmo < 100) {
+        alert(`Você ganhou um desconto de 10% 
+        e irá pagar apenas R$ ${desconto.toFixed(2)}`);
+    }
+    if (concusmo >= 100) {
+        alert(`Você irá pagar apenas R$ ${concusmo.toFixed(2)}`);
+    }
+}
+</script>

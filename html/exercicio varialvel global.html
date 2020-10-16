@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 27</title>
+</head>
+<body>
+    <!--
+3. Juliana Morosa gosta muito de números chamados "cabalísticos". Principalmente do 3, 4, 7 e 10. Ela quer saber quando chega em um determinado número de cliques que seja um deles. Assim, crie um programa em HTML/JS o qual:
+a) Tenha um texto "Você já clicou 0 vezes" no topo
+b) Ao clicar num botão "Clique cabalístico", o contador do texto em a) aumenta em 1 (ou seja, de 0 vai pra 1, de 1 vai pra 2, de 2 vai pra 3 e assim por diante)
+c) Caso o contador seja um dos quatro números que Juliana gosta, exiba um alert com a frase "Você clicou X vezes e Juliana gosta desse número!", onde X é a quantidade atual de cliques no botão
+    -->
+
+    Você tem R$<u id="u_cliques">0.00</u>no seu cofrinho! <br>
+   <button onclick="depositar()">Depositar R$10.00</button>
+   <button onclick="sacar()">Tirar R$2.00</button><br>
+</body>
+</html>
+<script>
+    var dinheiro = 0;
+    function depositar() {
+        dinheiro += 10;
+        u_cliques.innerHTML = dinheiro; 
+    }
+    function sacar() {
+        dinheiro -= 2; 
+        u_cliques.innerHTML = dinheiro;
+    }
+</script>

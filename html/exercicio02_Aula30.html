@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execício 02_Aula30.html</title>
+</head>
+<body>
+<!--
+2. Crie um programa em HTML/JS que avalie a possibilidade de um pagamento da compra ser parcelado ou não.
+a) Pergunte o modo de pagamento numa combo com as seguintes opções:
+    Dinheiro
+    Cartão de débito
+    Cartão de crédito
+    Boleto
+b) Ao clicar num botão "Analisar compra", exiba um alert com uma dessa mensagens:
+   "Você terá que pagar a vista", somente se o pagamento for dinheiro ou débito
+   "Pagamento poderá ser parcelado", se o pagamento for crédito ou boleto
+    -->
+
+    <select id="select_cafe">
+        <option value="">Escolha a forma de Pagamento</option>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="debito">Cartão de débito</option>
+        <option value="credito">Cartão de Crédito</option>
+        <option value="boleto">Boleto</option>
+    </select><br>
+    <button onclick="analisar()">Analisar compra!</button>
+</body>
+</html>
+<script>
+    function analisar() {
+        var avista = ("dinheiro" && "debito");
+        var parcelado = ("credito" && "boleto");
+
+        if (parcelado) {
+            alert("Pagamento poderá ser parcelado");
+        } else {
+            alert("Pagamento poderá ser parcelado");
+        } 
+        
+
+        
+    }
+</script>

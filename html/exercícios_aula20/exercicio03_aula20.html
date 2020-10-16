@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 03 - Aula 20</title>
+</head>
+<body>
+    <input id="in_filhos" placeholder="Quantos filhos?">
+    <button onclick="mostrar()">Verificar Situação!</button>
+    <div id="div_resultado"></div>
+</html>
+<script>
+    function mostrar() {
+        var filhos = (Number(in_filhos.value));
+        if (filhos == 0){
+            filhos = (`Sem descendentes`);
+        };
+        if (filhos == 1){
+            filhos = (`Filho único`);
+        };
+        if (filhos >= 2){
+            var filhos = (`Crescei e Multiplicai`);
+        };
+        div_resultado.innerHTML = `${filhos}`;
+    };
+</script>
